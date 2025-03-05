@@ -9,7 +9,7 @@ import CartPage from "./pages/CartPage";
 import WithCart from "./common/utils/withCart";
 import { CartProps } from "./common/types/cart";
 
-function App({ cartItems, cartCount, addToCart, removeFromCart }: CartProps) {
+function App({ cartItems, cartCount, addToCart, removeFromCart}: CartProps) {
   return (
     <Router>
       <ScrollToTop />
@@ -24,7 +24,7 @@ function App({ cartItems, cartCount, addToCart, removeFromCart }: CartProps) {
           <Route
             path="/carrinho"
             element={
-              <CartPage cartItems={cartItems} removeFromCart={removeFromCart} />
+              <CartPage cartItems={cartItems} removeFromCart={removeFromCart} cartCount={cartCount}/>
             }
           />
         </>
